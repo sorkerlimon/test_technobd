@@ -1,8 +1,8 @@
 <?php
-$host = 'your-rds-endpoint.amazonaws.com'; 
-$dbname = 'your_database_name';  
-$username = 'your_rds_username'; 
-$password = 'your_rds_password'; 
+$host = 'localhost'; 
+$dbname = 'echnoabd';  
+$username = 'root'; 
+$password = ''; 
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, name, email FROM users"; 
+$sql = "SELECT id, name, email FROM technobd_db"; 
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
