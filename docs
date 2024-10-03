@@ -13,9 +13,12 @@ rds - configure Subnet grp = test_subnet_db
 
 identifier = tech-database
 master username = admin
-password = FV#dfAdcvd124
+password = 
 
 // $host = 'localhost'; 
 // $dbname = 'technoabd';  
 // $username = 'root'; 
 // $password = ''; 
+
+
+Bucket Name  = test-technobd-s3
