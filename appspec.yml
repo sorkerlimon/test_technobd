@@ -3,7 +3,6 @@ os: linux
 files:
   - source: /
     destination: /var/www/technobd.com/public_html
-    overwrite: true  # This will allow overwriting existing files
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
