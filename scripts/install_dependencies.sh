@@ -10,5 +10,3 @@ sudo amazon-linux-extras enable php8.0
 sudo yum clean metadata
 sudo yum install php php-mysqlnd -y
 
-# Verify PHP installation
-php -v
