@@ -199,7 +199,7 @@ $totalPages = ceil($totalRows / $limit); // Total number of pages
 <body>
 
 <div class="container">
-    <h1>TechnoBd Limited</h1>
+    <h1>TechnoBd Limited ip-130-0-155-136.us-west-1.compute.internal</h1>
 
     <div class="filter-container">
         <input type="text" id="nameFilter" placeholder="Filter by Name" onkeyup="filterTable()">

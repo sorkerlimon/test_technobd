@@ -22,3 +22,36 @@ password =
 
 
 Bucket Name  = test-technobd-s3
+
+
+
+sudo yum update -y
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl status httpd
+sudo amazon-linux-extras enable php8.0   
+sudo yum clean metadata
+sudo yum install php php-mysqlnd -y
+php -v
+sudo mkdir -p /var/www/technobd.com/public_html
+sudo chown -R $USER:$USER /var/www/technobd.com/public_html
+sudo chmod -R 755 /var/www
+sudo chown -R apache:apache /var/www/technobd.com/public_html
+sudo vi /var/www/technobd.com/public_html/index.php
+<?php
+echo "Welcome to technobd.com!";
+?>
+sudo vi /etc/httpd/conf.d/technobd.com.conf
+<VirtualHost *:80>
+    ServerAdmin admin@technobd.com
+    ServerName technobd.com
+    ServerAlias www.technobd.com
+    DocumentRoot /var/www/technobd.com/public_html
+    ErrorLog /var/log/httpd/technobd.com-error.log
+    CustomLog /var/log/httpd/technobd.com-access.log combined
+</VirtualHost>
+sudo systemctl restart httpd
+sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak
+sudo systemctl restart httpd
+sudo systemctl status httpd

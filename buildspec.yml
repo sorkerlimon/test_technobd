@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - yum update -y           # Update system packages
+      - yum install -y php zip   # Install PHP and other necessary tools
+
+  pre_build:
+    commands:
+      - echo Preparing build...
+      - php -v                  # Verify PHP is installed
+
+  build:
+    commands:
+      - echo Starting build...
+      - echo "Build process complete."
+
+  post_build:
+    commands:
+      - echo Starting post-build...
+      - echo "Build completed successfully."
+
+artifacts:
+  files:
+    - '**/*'  # Include all files for output
