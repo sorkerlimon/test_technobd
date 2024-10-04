@@ -5,8 +5,12 @@ files:
     destination: /var/www/technobd.com/public_html
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies.sh
+    - location: scripts/cleanup_old_files.sh  # Cleanup script
       runas: root
   AfterInstall:
-    - location: scripts/restart_server.sh
+    - location: scripts/install_dependencies.sh  # Install dependencies
+      runas: root
+    - location: scripts/set_permissions.sh  # New script to set permissions
+      runas: root
+    - location: scripts/restart_server.sh  # Restart server
       runas: root
