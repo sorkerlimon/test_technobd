@@ -2,14 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/technobd.com/public_html  
-
+    destination: /var/www/technobd.com/public_html
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
-      timeout: 300
       runas: root
-  ApplicationStart:
-    - location: scripts/restart_apache.sh
-      timeout: 300
+  AfterInstall:
+    - location: scripts/restart_server.sh
       runas: root
