@@ -80,7 +80,8 @@
     <!-- Main Content Section -->
     <div class="main-content">
         <div>
-            <h2>Welcome to Technobd Limited! using code deploy--</h2>
+            <h2>Welcome to Technobd Limited!--</h2>
+            <h2>DevOps Implemented</h2>
             <p>This is a sample design for the homepage, focusing on DevOps Testing. Feel free to modify the content and add your own features.</p>
         </div>
     </div>
